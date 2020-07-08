@@ -601,8 +601,23 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.ProGrids">
+      <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder">
+      <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.Editor">
+      <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
+      <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProGrids.Editor">
+      <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -619,29 +634,14 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.ProBuilder.AddOns.Editor">
+      <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ProBuilder">
-      <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ProBuilder.Editor">
-      <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
-      <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ProBuilder.AddOns.Editor">
-      <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ProGrids">
-      <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ProGrids.Editor">
-      <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>
