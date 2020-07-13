@@ -598,8 +598,17 @@
     <Reference Include="System.Xml.Serialization">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.12f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.XR.Management">
+      <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Subsystem.Registration">
+      <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.Interaction.Toolkit">
+      <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.XR.Interaction.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProGrids">
       <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
@@ -610,11 +619,23 @@
     <Reference Include="Unity.ProBuilder">
       <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.XR.ARSubsystems">
+      <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.XR.ARSubsystems.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.ARSubsystems.Editor">
+      <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.XR.ARSubsystems.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.Interaction.Toolkit.Editor">
+      <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.XR.Interaction.Toolkit.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.ProBuilder.Editor">
       <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
       <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.InteractionSubsystems">
+      <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.XR.InteractionSubsystems.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProGrids.Editor">
       <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
@@ -631,14 +652,35 @@
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.XR.LegacyInputHelpers">
+      <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.Management.Editor">
+      <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.XR.Management.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.SpatialTracking">
+      <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTracking">
+      <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProBuilder.AddOns.Editor">
       <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.XR.WindowsMixedReality.Editor">
+      <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.XR.WindowsMixedReality.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.WindowsMixedReality">
+      <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/Unity.XR.WindowsMixedReality.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.XR.LegacyInputHelpers">
+      <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>F:/Packet39-Crane-Simulator/Packet39 Crane Simulator/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
