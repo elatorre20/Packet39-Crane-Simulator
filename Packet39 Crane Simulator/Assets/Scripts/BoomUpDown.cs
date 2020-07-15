@@ -35,21 +35,23 @@ public class BoomUpDown : MonoBehaviour
         else
         {
             motor.targetVelocity = 0;
+            BoomHingeJoint.motor = motor;
         }
-        BoomHingeJoint.motor = motor;
     }
 
     public void MoveUp()
     {
         if (motor.targetVelocity < MaxVeolcity)
             motor.targetVelocity += 1;
-        //Debug.Log("Up arrow pressed.\n" + motor.targetVelocity.ToString());
+        Debug.Log("Up arrow pressed.\n" + motor.targetVelocity.ToString());
+        BoomHingeJoint.motor = motor;
     }
 
     public void MoveDown()
     {
         if (motor.targetVelocity > (MaxVeolcity * -1))
             motor.targetVelocity -= 1;
-        //Debug.Log("Down arrow pressed.\n" + motor.targetVelocity.ToString());
+        Debug.Log("Down arrow pressed.\n" + motor.targetVelocity.ToString());
+        BoomHingeJoint.motor = motor;
     }
 }
