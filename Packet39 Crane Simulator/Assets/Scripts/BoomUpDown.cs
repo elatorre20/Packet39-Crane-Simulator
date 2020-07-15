@@ -17,7 +17,7 @@ public class BoomUpDown : MonoBehaviour
         motor = BoomHingeJoint.motor;
         motor.targetVelocity = 0;
         motor.force = 10;
-        Debug.Log(transform.name);
+        //Debug.Log(transform.name);
         BoomHingeJoint.motor = motor;
     }
 
@@ -26,20 +26,30 @@ public class BoomUpDown : MonoBehaviour
     {
         if (Input.GetKey("up"))
         {
-            if(motor.targetVelocity < MaxVeolcity) 
-                motor.targetVelocity += 1;
-            Debug.Log("Up arrow pressed.\n" + motor.targetVelocity.ToString());
+            MoveUp();
         } 
         else if (Input.GetKey("down"))
         {
-            if(motor.targetVelocity > (MaxVeolcity * -1))
-                motor.targetVelocity -= 1;
-            Debug.Log("Down arrow pressed.\n" + motor.targetVelocity.ToString());
+            MoveDown();
         }
         else
         {
             motor.targetVelocity = 0;
         }
         BoomHingeJoint.motor = motor;
+    }
+
+    public void MoveUp()
+    {
+        if (motor.targetVelocity < MaxVeolcity)
+            motor.targetVelocity += 1;
+        //Debug.Log("Up arrow pressed.\n" + motor.targetVelocity.ToString());
+    }
+
+    public void MoveDown()
+    {
+        if (motor.targetVelocity > (MaxVeolcity * -1))
+            motor.targetVelocity -= 1;
+        //Debug.Log("Down arrow pressed.\n" + motor.targetVelocity.ToString());
     }
 }

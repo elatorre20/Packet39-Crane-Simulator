@@ -25,20 +25,30 @@ public class CabinRotate : MonoBehaviour
     {
         if (Input.GetKey("left"))
         {
-            if (CabinMotor.targetVelocity < mVelocity)
-                CabinMotor.targetVelocity += 1;
-            Debug.Log("Left arrow pressed.\n" + CabinMotor.targetVelocity.ToString());
+            MoveLeft();
         }
         else if (Input.GetKey("right"))
         {
-            if (CabinMotor.targetVelocity > (mVelocity * -1))
-                CabinMotor.targetVelocity -= 1;
-            Debug.Log("Right arrow pressed.\n" + CabinMotor.targetVelocity.ToString());
+            MoveRight();
         }
         else
         {
             CabinMotor.targetVelocity = 0;
         }
         CabinHinge.motor = CabinMotor;
+    }
+
+    public void MoveLeft()
+    {
+        if (CabinMotor.targetVelocity < mVelocity)
+            CabinMotor.targetVelocity += 1;
+        //Debug.Log("Left arrow pressed.\n" + CabinMotor.targetVelocity.ToString());
+    }
+
+    public void MoveRight()
+    {
+        if (CabinMotor.targetVelocity > (mVelocity * -1))
+            CabinMotor.targetVelocity -= 1;
+        //Debug.Log("Right arrow pressed.\n" + CabinMotor.targetVelocity.ToString());
     }
 }
