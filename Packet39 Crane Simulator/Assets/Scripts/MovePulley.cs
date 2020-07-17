@@ -18,7 +18,7 @@ public class MovePulley : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = 0.1f;
+        speed = 0.01f;
         cableWidth = 0.1f;
 
         line = GetComponent<LineRenderer>();
@@ -34,7 +34,7 @@ public class MovePulley : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //NEED TO: if the cable have a max length
+        //NEED TO: add checking for max and min length of the cable
         line.SetPosition(0, gameObject.transform.position);
         line.SetPosition(1, magnettip.transform.position);
     }
@@ -42,18 +42,20 @@ public class MovePulley : MonoBehaviour
     public void Raise()
     {
         Debug.Log("up");
-        Vector3 position = magnet.transform.position;
-        position.y += speed;
-        magnet.transform.position = position;
+        magnet.GetComponent<Rigidbody>().isKinematic = false;
+        Vector3 anchor = magnet.GetComponent<SpringJoint>().connectedAnchor;
+        anchor.y += speed;
+        magnet.GetComponent<SpringJoint>().connectedAnchor = anchor;
     }
 
     public void Lower()
     {
         Debug.Log("down");
+        magnet.GetComponent<Rigidbody>().isKinematic = false;
         raiseButton.interactable = true;
-        Vector3 position = magnet.transform.position;
-        position.y -= speed;
-        magnet.transform.position = position;
+        Vector3 connectedAnchor = magnet.GetComponent<SpringJoint>().connectedAnchor;
+        connectedAnchor.y -= speed;
+        magnet.GetComponent<SpringJoint>().connectedAnchor = connectedAnchor;
     }
 
 }
