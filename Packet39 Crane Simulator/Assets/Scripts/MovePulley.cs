@@ -10,17 +10,17 @@ public class MovePulley : MonoBehaviour
     public GameObject magnettip;
     public GameObject magnet;
     public Button raiseButton;
+    public float speed;
 
     private LineRenderer line;
     private float cableWidth;
-    private float speed;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        speed = 0.01f;
         cableWidth = 0.1f;
-
+        speed = 1f;
         line = GetComponent<LineRenderer>();
         line.SetWidth(cableWidth, cableWidth);
         line.useWorldSpace = true;
@@ -43,19 +43,25 @@ public class MovePulley : MonoBehaviour
     {
         Debug.Log("up");
         magnet.GetComponent<Rigidbody>().isKinematic = false;
-        Vector3 anchor = magnet.GetComponent<SpringJoint>().connectedAnchor;
-        anchor.y += speed;
-        magnet.GetComponent<SpringJoint>().connectedAnchor = anchor;
+        float strength = magnet.GetComponent<SpringJoint>().spring;
+        strength = strength * 1.2f * speed;
+        magnet.GetComponent<SpringJoint>().spring = strength;
     }
 
     public void Lower()
     {
         Debug.Log("down");
-        magnet.GetComponent<Rigidbody>().isKinematic = false;
-        raiseButton.interactable = true;
-        Vector3 connectedAnchor = magnet.GetComponent<SpringJoint>().connectedAnchor;
-        connectedAnchor.y -= speed;
-        magnet.GetComponent<SpringJoint>().connectedAnchor = connectedAnchor;
+        if (magnet.GetComponent<SpringJoint>().spring > 10)
+        {
+            magnet.GetComponent<Rigidbody>().isKinematic = false;
+            raiseButton.interactable = true;
+            float strength = magnet.GetComponent<SpringJoint>().spring;
+            strength = strength * 0.8f * speed;
+            magnet.GetComponent<SpringJoint>().spring = strength;
+        }
+        else
+        {
+            Debug.Log("Reaches full length");
+        }
     }
-
 }

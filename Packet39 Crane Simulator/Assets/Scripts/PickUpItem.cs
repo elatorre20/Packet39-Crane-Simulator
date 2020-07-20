@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class PickUpItem : MonoBehaviour
 {
     private bool _holdingItem;
-    private bool fetch;
     private GameObject itemForPickUp;
     private FixedJoint _joint;
     public Button raiseButton;
@@ -15,7 +14,6 @@ public class PickUpItem : MonoBehaviour
     void Start()
     {
         _holdingItem = false;
-        fetch = true;
     }
 
     // Update is called once per frame
@@ -25,8 +23,9 @@ public class PickUpItem : MonoBehaviour
         {
             Debug.Log("Drop");
             Destroy(_joint);
+            _holdingItem = false;
             //StartCoroutine(turnOnisKinematic());
-        }
+        } 
     }
 
     //IEnumerator turnOnisKinematic()
@@ -37,9 +36,10 @@ public class PickUpItem : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag.Equals("Movable") && _holdingItem == false && fetch == true)
+        Debug.Log("Collide");
+        if (other.tag.Equals("Movable") && _holdingItem == false)
         {
-            Debug.Log("Collide");
+            
             other.gameObject.AddComponent<FixedJoint>();
             itemForPickUp = other.gameObject;
             _joint = other.gameObject.GetComponent<FixedJoint>();

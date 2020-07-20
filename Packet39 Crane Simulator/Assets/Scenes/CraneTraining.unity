@@ -23166,6 +23166,7 @@ MonoBehaviour:
   magnettip: {fileID: 2013928480}
   magnet: {fileID: 2534866581652075606}
   raiseButton: {fileID: 1892335473}
+  speed: 0
 --- !u!4 &319334101
 Transform:
   m_ObjectHideFlags: 0
@@ -37364,7 +37365,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh14936
+  m_Name: pb_Mesh14932
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
