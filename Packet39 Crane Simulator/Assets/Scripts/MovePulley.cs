@@ -11,6 +11,7 @@ public class MovePulley : MonoBehaviour
     public GameObject magnet;
     public Button raiseButton;
     public float speed;
+    public float maxLength = 30;
 
     private LineRenderer line;
     private float cableWidth;
@@ -51,7 +52,7 @@ public class MovePulley : MonoBehaviour
     public void Lower()
     {
         Debug.Log("down");
-        if (magnet.GetComponent<SpringJoint>().spring > 10)
+        if (magnet.GetComponent<SpringJoint>().spring > maxLength)
         {
             magnet.GetComponent<Rigidbody>().isKinematic = false;
             raiseButton.interactable = true;

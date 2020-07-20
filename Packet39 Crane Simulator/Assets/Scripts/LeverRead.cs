@@ -7,7 +7,7 @@ public class LeverRead : MonoBehaviour
     public HingeJoint Lever;
     public BoomUpDown Boom;
     public CabinRotate Cabin;
-    public float DeadzoneDegrees = 10f;
+    public float DeadzoneDegrees = 20f;
 
     public bool CabinRotation;
     public bool BoomElevation;
@@ -45,12 +45,17 @@ public class LeverRead : MonoBehaviour
         {
             if (CurrentAngle > DeadzoneDegrees)
             {
+                Boom.inputActive = true;
                 Boom.MoveDown();
             }
             if (CurrentAngle < -DeadzoneDegrees)
             {
-                //Debug.Log("move up");
+                Boom.inputActive = true;
                 Boom.MoveUp();
+            }
+            if(!(CurrentAngle < -DeadzoneDegrees) && !(CurrentAngle > DeadzoneDegrees))
+            {
+                Boom.inputActive = false;
             }
         }
 
