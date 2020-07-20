@@ -23,7 +23,9 @@ public class MovePulley : MonoBehaviour
         cableWidth = 0.1f;
         speed = 1f;
         line = GetComponent<LineRenderer>();
-        line.SetWidth(cableWidth, cableWidth);
+        line.startWidth = cableWidth;
+        line.endWidth = cableWidth;
+        //line.SetWidth(cableWidth, cableWidth);
         line.useWorldSpace = true;
 
         line.positionCount = 2;

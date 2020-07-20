@@ -29783,7 +29783,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh14884
+  m_Name: pb_Mesh15334
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -30276,7 +30276,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh14966
+  m_Name: pb_Mesh15336
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -30808,7 +30808,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh14834
+  m_Name: pb_Mesh15282
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -37368,7 +37368,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh14932
+  m_Name: pb_Mesh15304
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -42846,6 +42846,7 @@ GameObject:
   - component: {fileID: 2834078683143946139}
   - component: {fileID: 6806638068675662699}
   - component: {fileID: 1374660014}
+  - component: {fileID: 2534866581862068223}
   m_Layer: 0
   m_Name: BoomSection2
   m_TagString: Untagged
@@ -42853,6 +42854,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2534866581862068223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2534866581862068222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53b1592fb77eb244c83e2c79ff5e0a76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arm2: {fileID: 2534866581862068222}
+  arm3: {fileID: 2534866580839168928}
+  arm4: {fileID: 2534866582416824780}
+  increment: 0.02
 --- !u!1 &2534866582416824780
 GameObject:
   m_ObjectHideFlags: 0
