@@ -13,6 +13,7 @@ public class ExtensionArm : MonoBehaviour
     private float count;
     private float maxCount;
     private Vector3 mvmt;
+    public AudioManager audioManager;
 
     // Start is called before the first frame update
     void Start()
@@ -31,10 +32,12 @@ public class ExtensionArm : MonoBehaviour
         if (Input.GetKey(KeyCode.E))
         {
             ExtendArm(increment);
+            audioManager.Play(1); // plays crane move sound
         }
         else if (Input.GetKey(KeyCode.R))
         {
             RetractArm(increment);
+            audioManager.Play(1);
         }
     }
 

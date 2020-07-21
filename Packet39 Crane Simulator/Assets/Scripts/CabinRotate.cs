@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using JetBrains.Annotations;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ public class CabinRotate : MonoBehaviour
     private HingeJoint CabinHinge;
     private JointMotor CabinMotor;
     public int mVelocity;
+    public AudioManager audioManager;
 
     // Start is called before the first frame update
     void Start()
@@ -26,16 +28,21 @@ public class CabinRotate : MonoBehaviour
         if (Input.GetKey("left"))
         {
             MoveLeft();
+            audioManager.Play(1);  // plays crane move sound
+
         }
         else if (Input.GetKey("right"))
         {
             MoveRight();
+            audioManager.Play(1);
         }
         else
         {
             CabinMotor.targetVelocity = 0;
+            audioManager.Stop(1);
         }
         CabinHinge.motor = CabinMotor;
+
     }
 
     public void MoveLeft()

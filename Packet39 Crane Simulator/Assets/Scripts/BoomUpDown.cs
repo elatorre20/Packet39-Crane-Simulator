@@ -8,17 +8,22 @@ public class BoomUpDown : MonoBehaviour
     private JointMotor motor;
     public int MaxVeolcity;
     public bool inputActive = false;
+    public AudioManager audioManager;
 
     // Start is called before the first frame update
     void Start()
     {
         BoomHingeJoint = transform.GetComponent<HingeJoint>();
 
-
         motor = BoomHingeJoint.motor;
         motor.targetVelocity = 0;
         motor.force = 10;
         BoomHingeJoint.motor = motor;
+        
+        audioManager.Play(0); // 0 is the car_start sound
+        StartCoroutine(AudioWait());
+
+        audioManager.Play(2); // the idle sound, this will loop forever
     }
 
     // Update is called once per frame
@@ -38,7 +43,13 @@ public class BoomUpDown : MonoBehaviour
         {
             motor.targetVelocity = 0;
             BoomHingeJoint.motor = motor;
+
+            audioManager.Stop(1); // hardcoded since there are only 3 sounds, this is the crane moving sound
         }
+        else if(inputActive)
+        {
+            audioManager.Play(1); // hardcoded since there are only 3 sounds, this is the crane moving sound
+        }    
     }
 
     public void MoveUp()
@@ -55,5 +66,11 @@ public class BoomUpDown : MonoBehaviour
             motor.targetVelocity -= 1;
        //Debug.Log("Down arrow pressed.\n" + motor.targetVelocity.ToString());
         BoomHingeJoint.motor = motor;
+    }
+
+    IEnumerator AudioWait()
+    {
+        //Wait for 7 seconds, duration of "car_start" clip
+        yield return new WaitForSeconds(7);
     }
 }
