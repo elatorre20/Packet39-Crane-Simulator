@@ -67,6 +67,7 @@ public class ExtensionArm : MonoBehaviour
 
     public void RetractArm(float speed)
     {
+        Debug.Log("Retract");
         mvmt = new Vector3(-speed, 0f, 0f);
 
         if (count > (maxCount * 2))
