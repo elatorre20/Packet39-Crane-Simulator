@@ -36,6 +36,7 @@ public class BoomUpDown : MonoBehaviour
         }
         if(!inputActive)
         {
+            Debug.Log("arm stopped");
             motor.targetVelocity = 0;
             BoomHingeJoint.motor = motor;
         }

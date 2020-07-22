@@ -7,7 +7,7 @@ public class LeverRead : MonoBehaviour
     public HingeJoint Lever;
     public BoomUpDown Boom;
     public CabinRotate Cabin;
-    public float DeadzoneDegrees = 20f;
+    public float DeadzoneDegrees = 30f;
 
     public bool CabinRotation;
     public bool BoomElevation;
@@ -27,7 +27,7 @@ public class LeverRead : MonoBehaviour
     void Update()
     {
         CurrentAngle = Lever.angle;
-        //Debug.Log(CurrentAngle);
+        Debug.Log(CurrentAngle);
 
         if (CabinRotation)
         {

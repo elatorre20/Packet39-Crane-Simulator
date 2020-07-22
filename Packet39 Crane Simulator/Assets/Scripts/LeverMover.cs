@@ -5,36 +5,76 @@ using UnityEngine;
 public class LeverMover : MonoBehaviour
 {
     public Transform handle;
-    public GameObject handController;
-    private Vector3 movement;
+    public HingeJoint leverJoint;
+    private JointMotor motor;
+    private Vector3 origin;
+    public float deadzone = 0.1f;
+    float distance;
+    private bool isSelected = false;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        origin = handle.position;
+        motor = leverJoint.motor;
+        motor.targetVelocity = 0;
+        motor.force = 100;
+        leverJoint.motor = motor;
+        snapBack();
+    }
+    public void getDistance()
+    {
+        distance = transform.position.x - handle.position.x;
+        //Debug.Log(distance);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void snapBack()
     {
-        
+        transform.position = origin;
     }
 
-    private void OnTriggerStay(Collider other)
+    private void Update()
     {
-        if (other == handController)
+        getDistance();
+        if(distance > deadzone)
         {
-            transform.LookAt(other.transform.position, transform.up);
+            leverJoint.useMotor = true;
+            motor.targetVelocity = -20;
+            leverJoint.motor = motor;
+        }
+        if(distance < -deadzone)
+        {
+            leverJoint.useMotor = true;
+            motor.targetVelocity = 20;
+            leverJoint.motor = motor;
+        }
+        if(!(distance > deadzone) && !(distance < -deadzone))
+        {
+            //motor.targetVelocity = 0;
+            leverJoint.useMotor = false;
         }
         
-    }
 
-    public void followHand()
-    {
+        if(!isSelected)
+        {
+            snapBack();
+        }
     }
 
     public void selected()
     {
-        Debug.Log("lever selected");
+        isSelected = true;
     }
+
+    public void deselected()
+    {
+        isSelected = false;
+    }
+
+
+
+
+    //    public void selected()
+    //    {
+    //        Debug.Log("lever selected");
+    //    }
 }
