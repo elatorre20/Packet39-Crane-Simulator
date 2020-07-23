@@ -9,37 +9,39 @@ public class PickUpItem : MonoBehaviour
     private GameObject itemForPickUp;
     private FixedJoint _joint;
     public Button raiseButton;
+    public GameController control;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         _holdingItem = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (_holdingItem && Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("Drop");
+            float height = Mathf.Infinity;
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, Vector3.down, out hit))
+            {
+                height = Vector3.Distance(hit.point, transform.position);
+            }
+            Debug.Log(height.ToString());
+            control.TrainingSafetyCheck(height);
             Destroy(_joint);
             _holdingItem = false;
-            //StartCoroutine(turnOnisKinematic());
-        } 
-    }
 
-    //IEnumerator turnOnisKinematic()
-    //{
-    //    yield return new WaitForSeconds(0.5f);
-    //    itemForPickUp.GetComponent<Rigidbody>().isKinematic = true;
-    //}
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Collide");
         if (other.tag.Equals("Movable") && _holdingItem == false)
         {
-            
+
             other.gameObject.AddComponent<FixedJoint>();
             itemForPickUp = other.gameObject;
             _joint = other.gameObject.GetComponent<FixedJoint>();
@@ -55,3 +57,4 @@ public class PickUpItem : MonoBehaviour
     }
 
 }
+
