@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: c6a9a0cb9daacf2478f066fe1bd79fef, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -23460,7 +23460,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20708
+  m_Name: pb_Mesh16086
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -30290,7 +30290,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20750
+  m_Name: pb_Mesh16128
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -31009,7 +31009,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20754
+  m_Name: pb_Mesh16132
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -31643,7 +31643,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20722
+  m_Name: pb_Mesh16100
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -31806,7 +31806,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20700
+  m_Name: pb_Mesh16078
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -37235,7 +37235,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20702
+  m_Name: pb_Mesh16080
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
