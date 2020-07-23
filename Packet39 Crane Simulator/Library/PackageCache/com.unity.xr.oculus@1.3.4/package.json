@@ -22,12 +22,12 @@
   "repository": {
     "type": "git",
     "url": "https://github.cds.internal.unity3d.com/unity/xr.sdk.oculus.git",
-    "revision": "95a9ae46b888bd4eba50e6b7ba9a3ba1d96b0854"
+    "revision": "8ae255c850095578305b585fb83c73b95ec644d5"
   },
   "relatedPackages": {
     "com.unity.xr.oculus.tests": "1.3.4"
   },
   "upmCi": {
-    "footprint": "f03ae61715754f63ed1eabf92c44cba578a321a9"
+    "footprint": "fd08d5f536aa8058a4748c3c23ac7912d0f8e5e0"
   }
 }
