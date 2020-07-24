@@ -19,21 +19,7 @@ public class PickUpItem : MonoBehaviour
 
     void Update()
     {
-        if (_holdingItem && Input.GetKeyDown(KeyCode.Space))
-        {
-            Debug.Log("Drop");
-            float height = Mathf.Infinity;
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position, Vector3.down, out hit))
-            {
-                height = Vector3.Distance(hit.point, transform.position);
-            }
-            Debug.Log(height.ToString());
-            control.TrainingSafetyCheck(height);
-            Destroy(_joint);
-            _holdingItem = false;
-
-        }
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -53,6 +39,25 @@ public class PickUpItem : MonoBehaviour
         {
             Debug.Log("Pulley at top");
             raiseButton.interactable = false;
+        }
+    }
+
+    public void Drop()
+    {
+        if (_holdingItem)
+        {
+            Debug.Log("Drop");
+            float height = Mathf.Infinity;
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, Vector3.down, out hit))
+            {
+                height = Vector3.Distance(hit.point, transform.position);
+            }
+            Debug.Log(height.ToString());
+            control.TrainingSafetyCheck(height);
+            Destroy(_joint);
+            _holdingItem = false;
+
         }
     }
 

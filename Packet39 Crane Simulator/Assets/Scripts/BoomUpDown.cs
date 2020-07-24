@@ -24,29 +24,29 @@ public class BoomUpDown : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("up"))
-        {
-            inputActive = true;
-            MoveUp();
-        } 
-        else if (Input.GetKey("down"))
-        {
-            inputActive = true;
-            MoveDown();
-        }
-        //if(!inputActive)
-        else
-        {
-            //Debug.Log("arm stopped");
-            motor.targetVelocity = 0;
-            BoomHingeJoint.motor = motor;
-        }
+        //if (Input.GetKey("up"))
+        //{
+        //    //inputActive = true;
+        //    MoveUp();
+        //} 
+        //else if (Input.GetKey("down"))
+        //{
+        //    //inputActive = true;
+        //    MoveDown();
+        //}
+        ////if(!inputActive)
+        //else
+        //{
+        //    //Debug.Log("arm stopped");
+        //    motor.targetVelocity = 0;
+        //    BoomHingeJoint.motor = motor;
+        //}
     }
 
     public void MoveUp()
     {
         if (motor.targetVelocity < MaxVeolcity)
-            motor.targetVelocity += 1;
+            motor.targetVelocity += 0.5f;
         //Debug.Log("Up arrow pressed.\n" + motor.targetVelocity.ToString());
         BoomHingeJoint.motor = motor;
     }
@@ -54,8 +54,13 @@ public class BoomUpDown : MonoBehaviour
     public void MoveDown()
     {
         if (motor.targetVelocity > (MaxVeolcity * -1))
-            motor.targetVelocity -= 1;
+            motor.targetVelocity -= 0.5f;
        //Debug.Log("Down arrow pressed.\n" + motor.targetVelocity.ToString());
+        BoomHingeJoint.motor = motor;
+    }
+    public void armStop()
+    {
+        motor.targetVelocity = 0;
         BoomHingeJoint.motor = motor;
     }
 }

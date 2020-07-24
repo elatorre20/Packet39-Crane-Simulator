@@ -25,16 +25,14 @@ public class GameController : MonoBehaviour
     public Slider boxSizeSlider;
     public Text mistakeDisplay;
 
-    //objects on the tutorialmenu
-    public Text leftfunction;
-    public Text rightfunction;
+    public Material mat1; //material of the joystick
+    public Material mat2; //highlight material
+    public Material mat3; //material of the oil tank
 
-    public Material mat1;
-    public Material mat2;
-    public Material mat3;
-
-    public GameObject joystickRight;
-    public GameObject joystickLeft;
+    public GameObject BoomLever;
+    public GameObject CabLever;
+    public GameObject PulleyLever;
+    public GameObject ArmLever;
 
     private float timer;
     private bool paused;
@@ -51,8 +49,6 @@ public class GameController : MonoBehaviour
         startPanel.gameObject.SetActive(true);
         mainPanel.gameObject.SetActive(false);
         tutorialPanel.gameObject.SetActive(false);
-        leftfunction.gameObject.SetActive(false);
-        rightfunction.gameObject.SetActive(false);
         pause.interactable = true;
         restart.interactable = false;
     }
@@ -123,32 +119,73 @@ public class GameController : MonoBehaviour
 
         if (tutorialOn == false)
         {
-            leftfunction.gameObject.SetActive(tutorialOn);
-            rightfunction.gameObject.SetActive(tutorialOn);
-            joystickRight.GetComponent<Renderer>().material.CopyPropertiesFromMaterial(mat1);
-            joystickLeft.GetComponent<Renderer>().material.CopyPropertiesFromMaterial(mat1);
+            LeverDeHighlight();
         }
         else
         {
-            StartCoroutine(highlight(-1));
+            for (int i = 0; i<3; i++)
+            {
+                StartCoroutine(highlight(-1));
+            }
         }
     }
 
-    public void demoLeft(bool check)
+    public void demoCabLever(bool check)
     {
-        leftfunction.gameObject.SetActive(check);
         if (check)
         {
-            StartCoroutine(highlight(1));
+            for (int i = 0; i < 2; i++)
+            {
+                StartCoroutine(highlight(0));
+            }
+        } else
+        {
+            CabLever.GetComponent<Renderer>().material.CopyPropertiesFromMaterial(mat1);
         }
     }
 
-    public void demoRight(bool check)
+    public void demoBoomLever(bool check)
     {
-        rightfunction.gameObject.SetActive(check);
         if (check)
         {
-            StartCoroutine(highlight(0));
+            for (int i = 0; i<2; i++)
+            {
+                StartCoroutine(highlight(1));
+            }
+        } else
+        {
+            BoomLever.GetComponent<Renderer>().material.CopyPropertiesFromMaterial(mat1);
+        }
+    }
+
+    public void demoPulleyLever(bool check)
+    {
+        if (check)
+        {
+            for (int i = 0; i < 2; i++)
+            {
+                StartCoroutine(highlight(2));
+            }
+        }
+        else
+        {
+            PulleyLever.GetComponent<Renderer>().material.CopyPropertiesFromMaterial(mat1);
+        }
+    }
+   
+
+    public void demoExtensionLever(bool check)
+    {
+        if (check)
+        {
+            for (int i = 0; i < 2; i++)
+            {
+                StartCoroutine(highlight(3));
+            }
+        }
+        else
+        {
+            ArmLever.GetComponent<Renderer>().material.CopyPropertiesFromMaterial(mat1);
         }
     }
 
@@ -156,29 +193,40 @@ public class GameController : MonoBehaviour
     {
         if (x == 1)
         {
-            joystickLeft.GetComponent<Renderer>().material.CopyPropertiesFromMaterial(mat2);
+            BoomLever.GetComponent<Renderer>().material.CopyPropertiesFromMaterial(mat2);
         }
         else if (x == 0)
         {
-            joystickRight.GetComponent<Renderer>().material.CopyPropertiesFromMaterial(mat2);
+            CabLever.GetComponent<Renderer>().material.CopyPropertiesFromMaterial(mat2);
         }
         else if (x == -1)
         {
             ItemForPickUp.GetComponent<Renderer>().material.CopyPropertiesFromMaterial(mat2);
-        }
-        yield return new WaitForSeconds(2f);
-        if (x == 1 || x == 0)
+        } else if (x == 2)
         {
-            joystickRight.GetComponent<Renderer>().material.CopyPropertiesFromMaterial(mat1);
-            joystickLeft.GetComponent<Renderer>().material.CopyPropertiesFromMaterial(mat1);
+            PulleyLever.GetComponent<Renderer>().material.CopyPropertiesFromMaterial(mat2);
+        } else if (x == 3)
+        {
+            ArmLever.GetComponent<Renderer>().material.CopyPropertiesFromMaterial(mat2);
+        }
+        yield return new WaitForSeconds(1f);
+        if (x > -1)
+        {
+            LeverDeHighlight();
         }
         else if (x == -1)
         {
             ItemForPickUp.GetComponent<Renderer>().material.CopyPropertiesFromMaterial(mat3);
         }
-
     }
 
+    private void LeverDeHighlight()
+    {
+        CabLever.GetComponent<Renderer>().material.CopyPropertiesFromMaterial(mat1);
+        BoomLever.GetComponent<Renderer>().material.CopyPropertiesFromMaterial(mat1);
+        PulleyLever.GetComponent<Renderer>().material.CopyPropertiesFromMaterial(mat1);
+        ArmLever.GetComponent<Renderer>().material.CopyPropertiesFromMaterial(mat1);
+    }
     public void TrainingSafetyCheck(float height)
     {
         float h = (int)height;

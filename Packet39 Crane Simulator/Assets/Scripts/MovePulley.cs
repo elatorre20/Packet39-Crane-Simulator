@@ -40,16 +40,6 @@ public class MovePulley : MonoBehaviour
         //NEED TO: add checking for max and min length of the cable
         line.SetPosition(0, gameObject.transform.position);
         line.SetPosition(1, magnettip.transform.position);
-
-        if(Input.GetKey("f"))
-        {
-            Raise();
-        }
-
-        if(Input.GetKey("g"))
-        {
-            Lower();
-        }
     }
 
     public void Raise()

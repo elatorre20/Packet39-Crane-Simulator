@@ -27,7 +27,7 @@ public class LeverRead : MonoBehaviour
     void Update()
     {
         CurrentAngle = Lever.angle;
-        Debug.Log(CurrentAngle);
+        //Debug.Log(CurrentAngle);
 
         if (CabinRotation)
         {
