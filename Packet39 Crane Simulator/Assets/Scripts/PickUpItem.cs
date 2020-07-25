@@ -8,7 +8,7 @@ public class PickUpItem : MonoBehaviour
     private bool _holdingItem;
     private GameObject itemForPickUp;
     private FixedJoint _joint;
-    public Button raiseButton;
+    //public Button raiseButton;
     public GameController control;
     public AudioManager audio;
 
@@ -36,18 +36,12 @@ public class PickUpItem : MonoBehaviour
             other.gameObject.GetComponent<Rigidbody>().isKinematic = false;
             _holdingItem = true;
         }
-        else if (other.tag.Equals("Boom"))
-        {
-            Debug.Log("Pulley at top");
-            raiseButton.interactable = false;
-        }
     }
 
     public void Drop()
     {
         if (_holdingItem)
         {
-            Debug.Log("Drop");
             float height = Mathf.Infinity;
             RaycastHit hit;
             if (Physics.Raycast(transform.position, Vector3.down, out hit))
