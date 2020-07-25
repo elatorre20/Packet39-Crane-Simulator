@@ -18,6 +18,8 @@ public class GameController : MonoBehaviour
     public Slider boxSizeSlider;
     public Text mistakeDisplay;
 
+    public AudioManager audio;
+
     //levers 
     public Material mat1; //material of the joystick
     public Material mat2; //highlight material
@@ -74,8 +76,17 @@ public class GameController : MonoBehaviour
     public void MotorOnOff(bool on_off)
     {
         motorOn = on_off;
-
+        if (motorOn)
+        {
+            Debug.Log("motorSound");
+            audio.Play("CraneMotor");
+        } else
+        {
+            audio.Stop("CraneMotor");
+        }
     }
+
+
     public bool motorStatus()
     {
         return motorOn;

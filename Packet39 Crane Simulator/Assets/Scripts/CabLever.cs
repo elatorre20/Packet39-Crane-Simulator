@@ -7,6 +7,7 @@ public class CabLever : MonoBehaviour
     public Lever leverRoatation;
     public CabinRotate moveCab;
     public GameController controller;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -23,10 +24,12 @@ public class CabLever : MonoBehaviour
             if (value > 0)
             {
                 moveCab.MoveRight();
+               
             }
             else if (value < 0)
             {
                 moveCab.MoveLeft();
+               
             }
             else if (Mathf.Approximately(value, 0))
             {

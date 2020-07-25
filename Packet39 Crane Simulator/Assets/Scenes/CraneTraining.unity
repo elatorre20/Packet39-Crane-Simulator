@@ -1052,7 +1052,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh18238
+  m_Name: pb_Mesh18224
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1837,6 +1837,7 @@ MonoBehaviour:
   timeText: {fileID: 1343836699}
   boxSizeSlider: {fileID: 447110792}
   mistakeDisplay: {fileID: 40989448}
+  audio: {fileID: 1693753163}
   mat1: {fileID: 2100000, guid: 616a9e100205841418f7e7e7beef506b, type: 2}
   mat2: {fileID: 2100000, guid: c1f09430e9b7eae438b9fa4a82651fd5, type: 2}
   mat3: {fileID: 2100000, guid: 1388caf680c19e542a351a230103c4e3, type: 2}
@@ -16955,6 +16956,7 @@ MonoBehaviour:
   leverRotation: {fileID: 504619286}
   moveBoom: {fileID: 2534866581763855007}
   controller: {fileID: 160023134}
+  audio: {fileID: 1693753163}
 --- !u!114 &504619286 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1658977887327049737, guid: 97bba5fd3f5d742de9fc2ca1d1d4b2fb,
@@ -28499,6 +28501,7 @@ MonoBehaviour:
   leverRoatation: {fileID: 1144404247}
   moveCab: {fileID: 2534866581446960840}
   controller: {fileID: 160023134}
+  audio: {fileID: 1693753163}
 --- !u!114 &1144404247 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1658977887327049737, guid: 97bba5fd3f5d742de9fc2ca1d1d4b2fb,
@@ -40205,6 +40208,71 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.0556815, y: 3.0521913, z: 7.096422}
   m_Center: {x: 0.00009512901, y: 1.5258129, z: 0.020901084}
+--- !u!1 &1693753162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1693753164}
+  - component: {fileID: 1693753163}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1693753163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693753162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c4afaa98874fdd4a9a6a08757c3a768, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: CraneMotor
+    clip: {fileID: 8300000, guid: 28b2d6b754c5aef4ba0ebc7151eae6ff, type: 3}
+    volume: 0.333
+    pitch: 0.356
+    spatialBlend: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: ItemAttached
+    clip: {fileID: 8300000, guid: ad2b69afdd095dd4397114ef629cb91d, type: 3}
+    volume: 0.448
+    pitch: 0.445
+    spatialBlend: 0.906
+    loop: 0
+    source: {fileID: 0}
+  - name: InMotion
+    clip: {fileID: 8300000, guid: 09223d227b24b194595a240cf99ad1b8, type: 3}
+    volume: 0.482
+    pitch: 0.488
+    spatialBlend: 0.906
+    loop: 1
+    source: {fileID: 0}
+--- !u!4 &1693753164
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693753162}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.266, y: 5.824, z: -5.667}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1694478900
 GameObject:
   m_ObjectHideFlags: 0
@@ -49869,7 +49937,7 @@ SpringJoint:
   m_ConnectedAnchor: {x: -7.234621, y: 3.05, z: 0.599999}
   serializedVersion: 2
   m_Spring: 100
-  m_Damper: 1
+  m_Damper: 1.2
   m_MinDistance: 0
   m_MaxDistance: 0
   m_Tolerance: 0.025
@@ -49909,6 +49977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   raiseButton: {fileID: 0}
   control: {fileID: 160023134}
+  audio: {fileID: 1693753163}
 --- !u!65 &2534866581652075610
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -6,7 +6,8 @@ public class BoomLever : MonoBehaviour
 {
     public Lever leverRotation;
     public BoomUpDown moveBoom;
-    public GameController controller; 
+    public GameController controller;
+
 
     // Start is called before the first frame update
     void Start()

@@ -10,6 +10,7 @@ public class PickUpItem : MonoBehaviour
     private FixedJoint _joint;
     public Button raiseButton;
     public GameController control;
+    public AudioManager audio;
 
 
     void Start()
@@ -27,7 +28,7 @@ public class PickUpItem : MonoBehaviour
         Debug.Log("Collide");
         if (other.tag.Equals("Movable") && _holdingItem == false)
         {
-
+            audio.Play("ItemAttached");
             other.gameObject.AddComponent<FixedJoint>();
             itemForPickUp = other.gameObject;
             _joint = other.gameObject.GetComponent<FixedJoint>();
