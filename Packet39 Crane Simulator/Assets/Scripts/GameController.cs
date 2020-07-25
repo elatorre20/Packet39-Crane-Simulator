@@ -5,14 +5,7 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-    //For Motor on and off
-    public GameObject CraneCab;
-    public GameObject BoomSection1;
-    public GameObject BoomSection2;
-    public GameObject BoomSection4;
-    public GameObject Head;
     public GameObject ItemForPickUp;
-
     //menus
     public GameObject startPanel;
     public GameObject mainPanel;
@@ -25,6 +18,7 @@ public class GameController : MonoBehaviour
     public Slider boxSizeSlider;
     public Text mistakeDisplay;
 
+    //levers 
     public Material mat1; //material of the joystick
     public Material mat2; //highlight material
     public Material mat3; //material of the oil tank
@@ -34,14 +28,18 @@ public class GameController : MonoBehaviour
     public GameObject PulleyLever;
     public GameObject ArmLever;
 
+    //timer 
     private float timer;
     private bool paused;
     private int maxHeight;
 
+    //Motor on and off
+    private bool motorOn; 
+
 
     void Start()
     {
-        turnMotorOff();
+        motorOn = false;
         paused = false;
         timer = 0.0f;
         maxHeight = 5;
@@ -53,7 +51,7 @@ public class GameController : MonoBehaviour
         restart.interactable = false;
     }
 
-    // Update is called once per frame
+    // Update the timer 
     void Update()
     {
         if (!paused)
@@ -72,20 +70,15 @@ public class GameController : MonoBehaviour
         temp.z = sizeScale;
         ItemForPickUp.transform.localScale = temp;
     }
-    public void turnMotorOff()
+
+    public void MotorOnOff(bool on_off)
     {
-        CraneCab.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
-        Head.GetComponent<MovePulley>().enabled = false;
-        BoomSection1.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
-        BoomSection2.GetComponent<ExtensionArm>().enabled = false;
+        motorOn = on_off;
 
     }
-    public void turnMotorOn()
+    public bool motorStatus()
     {
-        CraneCab.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-        Head.GetComponent<MovePulley>().enabled = true;
-        BoomSection1.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-        BoomSection2.GetComponent<ExtensionArm>().enabled = true;
+        return motorOn;
     }
 
     public void startButton()
@@ -93,12 +86,12 @@ public class GameController : MonoBehaviour
         timer = 0.0f;
         startPanel.gameObject.SetActive(false);
         mainPanel.gameObject.SetActive(true);
-        turnMotorOn();
+        MotorOnOff(true);
     }
 
     public void pauseButton()
     {
-        turnMotorOff();
+        MotorOnOff(false);
         paused = true;
         pause.interactable = false;
         restart.interactable = true;
@@ -106,7 +99,7 @@ public class GameController : MonoBehaviour
 
     public void restartButton()
     {
-        turnMotorOn();
+        MotorOnOff(true);
         paused = false;
         pause.interactable = true;
         restart.interactable = false;

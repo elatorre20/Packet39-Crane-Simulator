@@ -42,7 +42,7 @@ public class CabinRotate : MonoBehaviour
     {
         if (CabinMotor.targetVelocity < mVelocity)
         {
-            CabinMotor.targetVelocity += 0.5f;
+            CabinMotor.targetVelocity += 0.02f;
         }
         //Debug.Log("Left arrow pressed.\n" + CabinMotor.targetVelocity.ToString());
         CabinHinge.motor = CabinMotor;
@@ -52,7 +52,7 @@ public class CabinRotate : MonoBehaviour
     {
         if (CabinMotor.targetVelocity > (mVelocity * -1))
         {
-            CabinMotor.targetVelocity -= 0.5f;
+            CabinMotor.targetVelocity -= 0.02f;
         }
         CabinHinge.motor = CabinMotor;
 

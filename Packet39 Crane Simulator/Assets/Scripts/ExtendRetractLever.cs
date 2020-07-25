@@ -6,6 +6,7 @@ public class ExtendRetractLever : MonoBehaviour
 {
     public Lever leverRoatation;
     public ExtensionArm moveArm;
+    public GameController controller;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,14 +16,18 @@ public class ExtendRetractLever : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float value = leverRoatation.ReadAxis();
-        if (value > 0)
+        if (controller.motorStatus())
         {
-            moveArm.ExtendArm();
+            float value = leverRoatation.ReadAxis();
+            if (value > 0)
+            {
+                moveArm.ExtendArm();
+            }
+            else if (value < 0)
+            {
+                moveArm.RetractArm();
+            }
         }
-        else if (value < 0)
-        {
-            moveArm.RetractArm();
-        }
+       
     }
 }

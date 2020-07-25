@@ -6,6 +6,8 @@ public class BoomLever : MonoBehaviour
 {
     public Lever leverRotation;
     public BoomUpDown moveBoom;
+    public GameController controller; 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,16 +17,22 @@ public class BoomLever : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float value = leverRotation.ReadAxis();
-        if (value > 0)
+        if (controller.motorStatus())
         {
-            moveBoom.MoveUp();
-        } else if (value < 0)
-        {
-            moveBoom.MoveDown();
-        } else if (Mathf.Approximately(value, 0))
-        {
-            moveBoom.armStop();
+            float value = leverRotation.ReadAxis();
+            if (value > 0)
+            {
+                moveBoom.MoveUp();
+            }
+            else if (value < 0)
+            {
+                moveBoom.MoveDown();
+            }
+            else if (Mathf.Approximately(value, 0))
+            {
+                moveBoom.armStop();
+            }
         }
+        
     }
 }

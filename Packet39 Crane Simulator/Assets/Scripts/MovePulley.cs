@@ -64,7 +64,7 @@ public class MovePulley : MonoBehaviour
             //magnet.GetComponent<Rigidbody>().isKinematic = false;
             //raiseButton.interactable = true;
             float strength = magnet.GetComponent<SpringJoint>().spring;
-            strength = strength - 1f * speed;
+            strength = strength - 0.8f * speed;
             magnet.GetComponent<SpringJoint>().spring = strength;
         }
         else
