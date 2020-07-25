@@ -9,9 +9,9 @@ public class MovePulley : MonoBehaviour
 {
     public GameObject magnettip;
     public GameObject magnet;
-    public Button raiseButton;
+    //public Button raiseButton;
     public float speed;
-    public float maxLength = 30;
+    //public float maxLength = 30;
 
     private LineRenderer line;
     private float cableWidth;
@@ -45,21 +45,26 @@ public class MovePulley : MonoBehaviour
     public void Raise()
     {
         Debug.Log("up");
-        magnet.GetComponent<Rigidbody>().isKinematic = false;
+        //magnet.GetComponent<Rigidbody>().isKinematic = false;
+      
         float strength = magnet.GetComponent<SpringJoint>().spring;
-        strength = strength * 1.2f * speed;
-        magnet.GetComponent<SpringJoint>().spring = strength;
+        if (strength < 100f)
+        {
+            strength = strength + 1f * speed;
+            magnet.GetComponent<SpringJoint>().spring = strength;
+        }
+       
     }
 
     public void Lower()
     {
         Debug.Log("down");
-        if (magnet.GetComponent<SpringJoint>().spring > maxLength)
+        if (magnet.GetComponent<SpringJoint>().spring > 20f)
         {
-            magnet.GetComponent<Rigidbody>().isKinematic = false;
-            raiseButton.interactable = true;
+            //magnet.GetComponent<Rigidbody>().isKinematic = false;
+            //raiseButton.interactable = true;
             float strength = magnet.GetComponent<SpringJoint>().spring;
-            strength = strength * 0.8f * speed;
+            strength = strength - 1f * speed;
             magnet.GetComponent<SpringJoint>().spring = strength;
         }
         else

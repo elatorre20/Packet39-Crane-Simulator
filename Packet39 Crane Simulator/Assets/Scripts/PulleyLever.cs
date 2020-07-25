@@ -5,7 +5,7 @@ using UnityEngine;
 public class PulleyLever : MonoBehaviour
 {
     public Lever leverRoatation;
-    public MovePulley movePulley;
+    public GameObject magnet;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,13 +16,12 @@ public class PulleyLever : MonoBehaviour
     void Update()
     {
         float value = leverRoatation.ReadAxis();
-        if (value > 0)
+        float strength = magnet.GetComponent<SpringJoint>().spring;
+        if ((strength < 100f && value > 0) || (strength > 10f && value < 0))
         {
-            movePulley.Raise();
-        }
-        else if (value < 0)
-        {
-            movePulley.Lower();
+            Debug.Log("Pulley");
+            strength = strength + 2f * value;
+            magnet.GetComponent<SpringJoint>().spring = strength;
         }
 
     }
