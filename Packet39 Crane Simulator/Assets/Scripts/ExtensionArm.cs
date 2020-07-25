@@ -61,7 +61,6 @@ public class ExtensionArm : MonoBehaviour
 
     public void RetractArm()
     {
-        Debug.Log("Retract");
         float speed = 0.01f;
         mvmt = new Vector3(-speed, 0f, 0f);
 

@@ -44,7 +44,7 @@ public class MovePulley : MonoBehaviour
 
     public void Raise()
     {
-        Debug.Log("up");
+        //Debug.Log("up");
         //magnet.GetComponent<Rigidbody>().isKinematic = false;
       
         float strength = magnet.GetComponent<SpringJoint>().spring;
@@ -58,7 +58,7 @@ public class MovePulley : MonoBehaviour
 
     public void Lower()
     {
-        Debug.Log("down");
+        //Debug.Log("down");
         if (magnet.GetComponent<SpringJoint>().spring > 20f)
         {
             //magnet.GetComponent<Rigidbody>().isKinematic = false;
@@ -67,9 +67,6 @@ public class MovePulley : MonoBehaviour
             strength = strength - 0.8f * speed;
             magnet.GetComponent<SpringJoint>().spring = strength;
         }
-        else
-        {
-            Debug.Log("Reaches full length");
-        }
+     
     }
 }

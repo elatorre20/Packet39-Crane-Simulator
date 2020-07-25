@@ -23,7 +23,7 @@ public class PulleyLever : MonoBehaviour
             float strength = magnet.GetComponent<SpringJoint>().spring;
             if ((strength < 100f && value > 0) || (strength > 10f && value < 0))
             {
-                Debug.Log("Pulley");
+                //Debug.Log("Pulley");
                 strength = strength + 2f * value;
                 magnet.GetComponent<SpringJoint>().spring = strength;
             }

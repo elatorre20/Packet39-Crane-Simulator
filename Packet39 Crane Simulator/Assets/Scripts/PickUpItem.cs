@@ -25,7 +25,7 @@ public class PickUpItem : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collide");
+        //Debug.Log("Collide");
         if (other.tag.Equals("Movable") && _holdingItem == false)
         {
             audio.Play("ItemAttached");

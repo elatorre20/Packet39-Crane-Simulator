@@ -1803,20 +1803,9 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1058904030}
-        m_MethodName: SetActive
+      - m_Target: {fileID: 160023134}
+        m_MethodName: DayMode
         m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 510536567}
-        m_MethodName: SetActive
-        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1939,6 +1928,8 @@ MonoBehaviour:
   startPanel: {fileID: 524741381}
   mainPanel: {fileID: 974101041}
   tutorialPanel: {fileID: 914223958}
+  pointLight: {fileID: 1058904030}
+  lamps: {fileID: 510536567}
   pause: {fileID: 894843632}
   restart: {fileID: 1313920718}
   timeText: {fileID: 1343836699}
@@ -16268,7 +16259,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 405144628}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.52, y: 2.303214, z: 0.5999999}
+  m_LocalPosition: {x: -7.586, y: 2.303214, z: 0.5999999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 504619290}

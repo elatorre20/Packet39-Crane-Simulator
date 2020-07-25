@@ -11,6 +11,9 @@ public class GameController : MonoBehaviour
     public GameObject mainPanel;
     public GameObject tutorialPanel;
 
+    public GameObject pointLight;
+    public GameObject lamps;
+
     //objects on the mainmenu
     public Button pause;
     public Button restart;
@@ -73,12 +76,17 @@ public class GameController : MonoBehaviour
         ItemForPickUp.transform.localScale = temp;
     }
 
+    public void DayMode(bool x)
+    {
+        pointLight.gameObject.SetActive(x);
+        lamps.gameObject.SetActive(!x);
+    }
+
     public void MotorOnOff(bool on_off)
     {
         motorOn = on_off;
         if (motorOn)
-        {
-            Debug.Log("motorSound");
+        { 
             audio.Play("CraneMotor");
         } else
         {
