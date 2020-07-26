@@ -29,10 +29,10 @@
 		
 ### Collaboration: <br>
 
-Aurelius: environment, lighting, textures, movement scripting
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aurelius: environment, lighting, textures, movement scripting <br>
 		
-Emilio: models, movement scripting
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Emilio: models, movement scripting <br>
 		
-Minglan: VR control levers, UI Menus, pulley motion & pickup, audio 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minglan: VR control levers, UI Menus, pulley motion & pickup, audio <br>
 		
 _Special thanks to Craig from XRterra for helping us debug so many things_
