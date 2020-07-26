@@ -35,4 +35,6 @@
 		
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minglan: VR control levers, UI Menus, pulley motion & pickup, audio <br>
 		
-_Special thanks to Craig from XRterra for helping us debug so many things_
+_Special thanks to Craig from XRTerra for helping us debug so many things_
+
+
