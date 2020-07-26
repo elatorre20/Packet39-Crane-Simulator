@@ -6,7 +6,7 @@
 
 <p align="center">
 <img src="https://i.postimg.cc/c1csTxHJ/Screen-Shot-2020-07-26-at-7-35-48-AM.png"></p>
- 
+<br />
 
 ### VR Control Reference: <br>
 
@@ -16,6 +16,7 @@
 1. Cabin rotation (rotates the whole cabin/boom assembly)
 3. Magnet elevation (raises/lowers the magnet by changing the length of its cable)
 4. Boom extension
+<br />
 
 ### Highlights: <br>
 
@@ -24,8 +25,7 @@
 3. User-friendly UI: the UI screen provides a **tutorial** explaining the VR controls and provides **warning feedback** if the user performs an unsafe maneuver such as dropping the container from too high.
 4. Helpful yet non-distracting **audio**: a “beap” sound once object is attached to pulley, motor sound when the crane is turned on.
 5. Cabin rotation speed is limited to reduce motion sickness in VR.
-	
-
+<br />
 		
 ### Collaboration: <br>
 
