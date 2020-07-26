@@ -20,8 +20,8 @@
 ### Highlights: <br>
 
 1. The overall physics of the crane mimic a real one; the pick-up feature simulates the physics of a rope.
-2. Flexible training settings: To offer a more challenging training scenario, the simulator can adjust the size of the target container and can switch between **day/night mode**.
-3. User-friendly UI: The UI screen provides a **tutorial** explaining the VR controls and provides **warning feedback** if the user performs an unsafe maneuver such as dropping the container from too high.
+2. Flexible training settings: to offer a more challenging training scenario, the simulator can adjust the size of the target container and can switch between **day/night mode**.
+3. User-friendly UI: the UI screen provides a **tutorial** explaining the VR controls and provides **warning feedback** if the user performs an unsafe maneuver such as dropping the container from too high.
 4. Helpful yet non-distracting **audio**: a “beap” sound once object is attached to pulley, motor sound when the crane is turned on.
 5. Cabin rotation speed is limited to reduce motion sickness in VR.
 	
@@ -29,10 +29,10 @@
 		
 ### Collaboration: <br>
 
-	Aurelius: environment, lighting, textures, movement scripting
+Aurelius: environment, lighting, textures, movement scripting
 		
-	Emilio: models, movement scripting
+Emilio: models, movement scripting
 		
-	Minglan: VR control levers, UI Menus, pulley motion & pickup, audio 
+Minglan: VR control levers, UI Menus, pulley motion & pickup, audio 
 		
-	Special thanks to Craig from XRterra for helping us debug so many things
+_Special thanks to Craig from XRterra for helping us debug so many things_
